@@ -1,0 +1,21 @@
+{
+  "name": "nlw",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tartaponei/NLW.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tartaponei/NLW/issues"
+  },
+  "homepage": "https://github.com/tartaponei/NLW#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
