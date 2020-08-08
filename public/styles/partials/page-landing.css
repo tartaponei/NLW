@@ -125,6 +125,7 @@ body {
 
 .total-connections {
     font-size: 2rem;
+    color: var(--color-text-complement);
 
     /* display: flex;
     align-items: center;
@@ -146,14 +147,18 @@ body {
 
 /* espécie de if */
 @media (min-width: 1100px) {
-    #page-landing #container {
-        max-width: 1100px;
+    #page-landing #purple-container {
+        /* max-width: 1100px; */
         display: grid;
-        grid-template-columns: 2fr 1fr 2fr;
-        grid-template-rows: 350px 1fr;
-        grid-template-areas: "proffy image image" "button button texting";
-        column-gap: 87px;
+        grid-template-columns: 50%;
+        /* grid-template-rows: 430px; */
+        grid-template-areas: "proffy image";
+        /* column-gap: 87px; */
         row-gap: 86px;
+        padding: 0 15rem;
+        padding-top: 2rem;
+        height: 60vh;
+        margin-bottom: 0;
     }
 
     .logo-container {
@@ -162,26 +167,76 @@ body {
         align-self: center;
     }
 
+    .logo-container h2 {
+        font-size: 2.8rem;
+        max-width: 300px;
+        line-height: 3.7rem;
+    }
+
     .logo-container img {
-        height: 100%;
-        height: 127px;
+        /* height: 100%; */
+        height: 9vw;
         margin: 0;
     }
 
     .hero-image {
         grid-area: image;
-        height: 350px;
+        height: 70%;
+        width: 100%;
+        /* max-width: 400px; */
+    }
+
+    #page-landing #gray-container {
+        display: grid;
+        grid-template-columns: 30vw 12vw;
+        /* grid-template-rows: 10vh; */
+        grid-template-areas: "welcome connections buttons";
+    }
+
+    .welcome-text {
+        grid-area: welcome-start;
+        font-size: 2rem;
+        margin: auto 7rem;
     }
 
     .buttons-container {
-        grid-area: button;
-        justify-content: flex-start;
+        grid-area: buttons-start;
+        justify-content: center;
         margin: 0;
+    }
+
+    .buttons-container a {
+        width: 16vw;
+        height: 8rem;
+        font-size: 1.93rem;
+        padding: 3rem;
+        display: flex;
+        align-content: center;
+        justify-content: space-evenly;
+        line-height: 2.8rem;
+    }
+
+    .buttons-container a img {
+        width: 3rem;
+        margin: 0;
+        height: 3rem;
     }
 
     .total-connections {
         grid-area: texting;
         justify-self: end;
         font-size: 1.2rem;
+    }
+
+    .total-connections-container {
+        grid-area: connections;
+        margin: auto;
+        text-align: end;
+        margin-right: 1rem;
+    }
+
+    .total-connections img {
+        position: initial;
+        margin-left: 0.2rem;
     }
 }
