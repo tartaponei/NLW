@@ -2,7 +2,7 @@
 const express = require("express")
 const server = express()
 
-const {pageLanding, pageStudy, pageGiveClasses, saveClasses} = require("./pages")
+const {pageLanding, pageStudy, pageGiveClasses, saveClasses, pageRegistered} = require("./pages")
 
 //=======================================================configuração do nunjucks
 const nunjucks = require("nunjucks")
@@ -23,6 +23,7 @@ server
 .get("/", pageLanding) // no endereço '/' ele vai mostrar o arquivo que tá lá na função
 .get("/study", pageStudy)
 .get("/give-classes", pageGiveClasses)
+.get("/registered", pageRegistered)
 .post("/save-classes", saveClasses)
 //start do server
 .listen(5500)

@@ -52,6 +52,10 @@ function pageGiveClasses(req, res) {
     return res.render("give-classes.html", {subjects, weekdays}) // no endereço give-classes ele vai mostrar o give-classes.html
 }
 
+function pageRegistered(req, res) {
+    return res.render("registered.html")
+}
+
 async function saveClasses(req, res) {
     const createProffy = require("./database/createProffy")
     
@@ -98,4 +102,4 @@ async function saveClasses(req, res) {
     //}
 }
 
-module.exports = {pageLanding, pageStudy, pageGiveClasses, saveClasses}
+module.exports = {pageLanding, pageStudy, pageGiveClasses, saveClasses, pageRegistered}
